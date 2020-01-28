@@ -84,7 +84,7 @@ DELETE FROM movies WHERE title = 'Batman Begins';
 INSERT INTO people (name) VALUES ('Bart Simpson');
 
 7.  Eric Cartman has decided to hijack our movie evening, Remove him from the table of people.
-DELETE from people Where name = 'Eric Cartman';
+DELETE FROM people WHERE name = 'Eric Cartman';
 8.  The cinema has just heard that they will be holding an exclusive midnight showing of 'Avengers: Infinity War'!! Create a new entry in the 'movies' table to reflect this.
 INSERT INTO movies (title, show_time) VALUES ('Avengers: Infinity War', '00:00');
 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
@@ -98,3 +98,7 @@ UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
 ## Extension
 
 1.  Research how to delete multiple entries from your table in a single command.
+
+
+DELETE FROM movies WHERE id BETWEEN 1 AND 5;
+DELETE FROM people WHERE id IN (1,2,3);
